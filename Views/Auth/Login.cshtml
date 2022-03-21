@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Inicio de sesión";
+}
+<h2>Inicio de sesion</h2>
+
+<form action="~/Auth/Authentication" method="post" class="form-group">
+
+    <div class="input-group">
+        <label>Ingresa tu Usuario</label><br />
+        <input type="text" name="usuario" class ="" required />
+    </div>
+    <div class="input-group">
+        <label>Ingresa tu contraseña</label><br />
+        <input type="password" name="contraseña" required />
+    </div>
+    <div class="input-group">
+        <button class="btn btn-success">Ingresar</button>
+    </div>
+</form>
+
