@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
@@ -30,7 +29,9 @@ namespace WebLogin.Models.Action
 
             //crear data table para almacenar los datos
             _ = new DataTable();
-            DataTable dt = Data.Data.Query(sql, parametros, CommandType.Text, Conexion);
+            DataTable dt = 
+                
+                Data.Data.Query(sql, parametros, CommandType.Text, Conexion);
 
             if (dt.Rows.Count > 0 )
             {

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿
 using System.Web.Mvc;
 using WebLogin.Models.Action;
 using WebLogin.Models.Entity;
@@ -19,14 +16,14 @@ namespace WebLogin.Controllers
         [HttpPost]
         public ActionResult Authentication(string usuario,string contraseña)
         {
-          
+
             if (Isvalid(UsuarioA.Get(usuario), usuario, contraseña)){
 
                 return RedirectToAction("Index","Home");
             }
             else
             {
-                return View(); 
+                return RedirectToAction("Login", "Auth");
             }
             
         }
